@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
-  get 'todo/show'
+  root 'welcome#index'
 
-  root to: 'welcome#index'
+  get 'welcome/index'
 
-  get 'welcome/about'
-  
+  get 'users/show'
+
   devise_for :users
 end
