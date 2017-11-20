@@ -6,5 +6,7 @@ Rails.application.routes.draw do
 
   get 'users/show'
 
+  resources :items, only: [:create]
+
   devise_for :users
 end

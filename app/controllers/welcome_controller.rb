@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
   def index
-  end
-
-  def about
+    if user_signed_in?
+      redirect_to users_show_path(current_user)
+    end
   end
 end
